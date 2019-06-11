@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'montserrat', sans-serif;
+  box-sizing: border-box;
+}
+#wrap {
+  width: 100%;
+  padding: 60px 0;
+  background: #f1f1f1;
+}
+#wrap > .inner-width {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+#wrap > .inner-width > h1 {
+  text-align: center;
+  color: #333;
+}
+#wrap > .inner-width > .underline {
+  width: 180px;
+  height: 4px;
+  background-color: #333;
+  margin: 60px auto;
+}
+#wrap > .inner-width .Photo-album {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+}
+#wrap > .inner-width .Photo-album > .imges {
+  flex: 25%;
+  overflow: hidden;
+  cursor: pointer;
+}
+#wrap > .inner-width .Photo-album > .imges > img {
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+}
+#wrap > .inner-width .Photo-album > .imges > img:hover {
+  transform: scale(1.5) rotate(20deg);
+}
+@media only screen and (max-width: 960px) {
+  #wrap > .inner-width .Photo-album > .imges {
+    flex: 33.3%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #wrap > .inner-width .Photo-album > .imges {
+    flex: 50%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #wrap > .inner-width .Photo-album > .imges {
+    flex: 100%;
+  }
+}
