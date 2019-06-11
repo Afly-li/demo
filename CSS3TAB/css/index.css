@@ -1,0 +1,76 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	text-decoration: none;
+	list-style: none;
+}
+body{
+	background: #2c3e50;
+}
+.midden{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 8px;
+}
+.mues{
+	width: 300px;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.mues > .centent{
+	border-top: 1px solid #c0392b;
+	overflow: hidden;
+}
+.btn{
+	display: block;
+	background-color: #c0392b;
+	color: white;
+	padding: 16px 14px;
+	position: relative;
+}
+.btn::before{
+	content: "";
+	height: 16px;
+	width: 16px;
+	background-color: #c0392b;
+	position:absolute;
+	bottom: -7px;
+	left: 21px;
+	transform: rotate(45deg);
+}
+.btn i{
+	margin-right: 10px;
+}
+.sume{
+	background-color: #333;
+	overflow: hidden;
+	transition: max-height 0.3s;
+	max-height: 0;
+}
+.sume a{
+	display: block;
+	color: white;
+	padding: 16px 26px;
+	font-size: 14px;
+	margin: 4px 0;
+	position: relative;
+}
+.sume a::before{
+	content: "";
+	position: absolute;
+	width: 6px;
+	height: 100%;
+	background-color: #c0392b;
+	left:0;
+	top: 0;
+	opacity: 0;
+}
+.sume a:hover::before{
+	opacity: 1;
+}
+.centent:target .sume{
+	max-height: 10em;
+}
